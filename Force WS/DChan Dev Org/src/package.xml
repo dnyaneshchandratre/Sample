@@ -72,7 +72,6 @@
         <members>CampaignMember</members>
         <members>Case</members>
         <members>CaseContactRole</members>
-        <members>Clients__c.object</members>
         <members>Contact</members>
         <members>ContactCleanInfo</members>
         <members>ContentVersion</members>

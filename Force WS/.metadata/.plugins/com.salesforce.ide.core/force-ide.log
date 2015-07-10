@@ -417,3 +417,33 @@ java.lang.NullPointerException
  WARN [2015-07-09 19:52:33,854] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
  WARN [2015-07-09 19:52:33,870] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
  WARN [2015-07-09 19:52:33,876] (MetadataFactory.java:clearCache:129) - Clearing the following cached metadata stubs
+ERROR [2015-07-10 16:29:15,486] (SyncServiceListenerBroadcaster.java:handleException:59) - Error executing a contributed ISyncServiceListener
+java.lang.NullPointerException
+	at com.salesforce.ide.core.model.ComponentList.getComponentFactory(ComponentList.java:62)
+	at com.salesforce.ide.core.model.ComponentList.getComponentListForComponentType(ComponentList.java:266)
+	at com.salesforce.ide.debug.ui.sync.SyncActionListener.collectDebuggerElements(SyncActionListener.java:154)
+	at com.salesforce.ide.debug.ui.sync.SyncActionListener.invalidateApexModelManager(SyncActionListener.java:122)
+	at com.salesforce.ide.debug.ui.sync.SyncActionListener.projectSync(SyncActionListener.java:114)
+	at com.salesforce.ide.core.services.hooks.SyncServiceListenerBroadcaster$1.run(SyncServiceListenerBroadcaster.java:54)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at com.salesforce.ide.core.services.hooks.SyncServiceListenerBroadcaster.executeExtension(SyncServiceListenerBroadcaster.java:62)
+	at com.salesforce.ide.core.services.hooks.SyncServiceListenerBroadcaster.broadcast(SyncServiceListenerBroadcaster.java:40)
+	at com.salesforce.ide.core.model.ProjectPackageList.saveResources(ProjectPackageList.java:1210)
+	at com.salesforce.ide.core.model.ProjectPackageList.saveResources(ProjectPackageList.java:1127)
+	at com.salesforce.ide.core.services.ProjectService$1.run(ProjectService.java:2103)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at com.salesforce.ide.core.services.ProjectService.handleRetrieveResult(ProjectService.java:2099)
+	at com.salesforce.ide.ui.actions.RefreshResourceActionController.refreshSourceFolder(RefreshResourceActionController.java:238)
+	at com.salesforce.ide.ui.actions.RefreshResourceActionController.refreshResources(RefreshResourceActionController.java:146)
+	at com.salesforce.ide.ui.actions.RefreshResourceAction$1.execute(RefreshResourceAction.java:77)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+ WARN [2015-07-10 17:02:18,976] (DefaultBuilder.java:applyDirtyMarkers:93) - TODO: apply 'Save locally only...' markers on each resource
+ WARN [2015-07-10 17:05:03,326] (DefaultBuilder.java:applyDirtyMarkers:93) - TODO: apply 'Save locally only...' markers on each resource
+ WARN [2015-07-10 17:41:40,067] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-07-10 17:41:40,073] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-07-10 17:41:40,078] (MetadataFactory.java:clearCache:129) - Clearing the following cached metadata stubs
