@@ -11,6 +11,7 @@
     <members>Sample</members>
   </types>
   <types isSubType="false">
+    <members>Sample_Component</members>
     <name>ApexComponent</name>
   </types>
   <types isSubType="false">
